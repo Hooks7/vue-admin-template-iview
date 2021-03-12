@@ -1,24 +1,24 @@
 <template>
-    <div>
-        <img :src="img">
-        <p>未到找指定页面</p>
-        <Button class="back" @click="back">返回页面</Button>
-    </div>
+  <div>
+    <img :src="img">
+    <p>未到找指定页面</p>
+    <Button class="back" @click="back">返回页面</Button>
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'error',
-    data() {
-        return {
-            img: require('../assets/imgs/404.jpg'),
-        }
-    },
-    methods: {
-        back() {
-            this.$router.back()
-        },
-    },
+  name: 'Error',
+  data() {
+    return {
+      img: require('../assets/imgs/404.jpg')
+    }
+  },
+  methods: {
+    back() {
+      this.$router.back()
+    }
+  }
 }
 </script>
 

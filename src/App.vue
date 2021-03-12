@@ -1,27 +1,27 @@
 <template>
-    <div id="app">
-        <router-view/>
-        <div class="global-loading" v-show="isShowLoading">
-            <Spin size="large"></Spin>
-        </div>
+  <div id="app">
+    <router-view />
+    <div v-show="isShowLoading" class="global-loading">
+      <Spin size="large" />
     </div>
+  </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 
 export default {
-    name: 'App',
-    data() {
-        return {
-            keepAliveData: ['manage'],
-        }
-    },
-    computed: {
-        ...mapState([
-            'isShowLoading',
-        ]),
-    },
+  name: 'App',
+  data() {
+    return {
+      keepAliveData: ['manage']
+    }
+  },
+  computed: {
+    ...mapState([
+      'isShowLoading'
+    ])
+  }
 }
 </script>
 

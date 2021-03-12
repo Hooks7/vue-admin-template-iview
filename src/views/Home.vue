@@ -1,30 +1,29 @@
 <template>
-    <div class="home-container">
-        <div class="home-content">
-            <Button @click="getUserData">ajax 测试</Button>
-
-            <Input :rows="30" style="margin-top: 20px" v-model="userInfo" type="textarea" />
-        </div>
+  <div class="home-container">
+    <div class="home-content">
+      <Button @click="getUserData">ajax 测试</Button>
+      <Input v-model="userInfo" :rows="30" style="margin-top: 20px" type="textarea" />
     </div>
+  </div>
 </template>
 
 <script>
 import { fetchUserData } from '@/api'
 
 export default {
-    name: 'home',
-    data() {
-        return {
-            userInfo: '',
-        }
-    },
-    methods: {
-        getUserData() {
-            fetchUserData().then(res => {
-                this.userInfo = JSON.stringify(res, null, 4)
-            })
-        },
-    },
+  name: 'Home',
+  data() {
+    return {
+      userInfo: ''
+    }
+  },
+  methods: {
+    getUserData() {
+      fetchUserData().then(res => {
+        this.userInfo = JSON.stringify(res, null, 4)
+      })
+    }
+  }
 }
 </script>
 

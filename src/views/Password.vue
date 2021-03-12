@@ -1,18 +1,18 @@
 <template>
-    <div>
-        修改密码
-        <input type="text">
-    </div>
+  <div>
+    修改密码
+    <input type="text">
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'password',
-    data() {
-        return {
+  name: 'Password',
+  data() {
+    return {
 
-        }
-    },
+    }
+  }
 }
 </script>
 
